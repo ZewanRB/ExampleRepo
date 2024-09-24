@@ -22,11 +22,11 @@ URL = "https://testpages.eviltester.com/styled/dynamic-buttons-disabled.html"
 class TestButtonDisabled:
     def setup_method(self):
         options = Options()
+        options.add_argument('--headless')
         options.add_argument('window-position=2000,50')
         options.add_argument("--disable-search-engine-choice-screen")
         options.add_experimental_option("detach", True)
         self.browser = webdriver.Chrome(options=options)
-        options.add_argument('--headless')
         self.browser.get(URL)
         self.browser.maximize_window()
 
