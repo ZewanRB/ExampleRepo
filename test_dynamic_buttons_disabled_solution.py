@@ -26,6 +26,7 @@ class TestButtonDisabled:
         options.add_argument("--disable-search-engine-choice-screen")
         options.add_experimental_option("detach", True)
         self.browser = webdriver.Chrome(options=options)
+        options.add_argument('--headless')
         self.browser.get(URL)
         self.browser.maximize_window()
 
